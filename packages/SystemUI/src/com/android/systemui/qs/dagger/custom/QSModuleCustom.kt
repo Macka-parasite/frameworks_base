@@ -27,7 +27,6 @@ import com.android.systemui.qs.tiles.AODTile
 import com.android.systemui.qs.tiles.LiveDisplayTile
 import com.android.systemui.qs.tiles.ReadingModeTile
 import com.android.systemui.qs.tiles.AntiFlickerTile
-import com.android.systemui.qs.tiles.SoundSearchTile
 import com.android.systemui.qs.tiles.CellularTile
 import com.android.systemui.qs.tiles.WifiTile
 import com.android.systemui.qs.tiles.CaffeineTile
@@ -99,12 +98,6 @@ interface QSModuleCustom {
     @IntoMap
     @StringKey(AntiFlickerTile.TILE_SPEC)
     fun bindAntiFlickerTile(antiFlickerTile: AntiFlickerTile): QSTileImpl<*>
-
-    /** Inject SoundSearchTile into tileMap in QSModule */
-    @Binds
-    @IntoMap
-    @StringKey(SoundSearchTile.TILE_SPEC)
-    fun bindSoundSearchTile(soundSearchTile: SoundSearchTile): QSTileImpl<*>
 
     /** Inject CellularTile into tileMap in QSModule */
     @Binds
